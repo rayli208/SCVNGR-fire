@@ -1,15 +1,18 @@
 {
   "hosting": {
-    "public": "Y",
+    "public": "dist/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
+    "rewrites": [ 
       {
         "source": "**",
-        "destination": "/index.html"
+        "run": {
+          "serviceId": "nest-angular-ssr",
+          "region": "us-central1" 
+        }
       }
     ]
   }
